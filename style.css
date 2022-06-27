@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Monoton&family=Playfair+Display&family=Water+Brush&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  
+
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /*Tamaño del header, para que cuando navego mediante el nav no se superponga header a las secciones*/
+}
+:root{
+    --backprin-:antiquewhite;
+    --backnav-:white;
+    /* --fuente-:font-family: 'Monoton', cursive; */
+
+}
+body{
+  font-family: sans-serif;
+  width: 100vw;
+  max-width: 100%;
+  text-decoration: none;
+  list-style: none;
+}
+
+.container-logo img{
+ width: 100px;
+}
+.navbar-list{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 100px;
+  right: calc(0vw);
+  /* background-color: aqua; */
+  width: 100%;
+  gap: 5px;
+  
+  display: none;
+}
+.navbar-list a{
+
+  color: red;
+  font-size: 50px;
+}
+.navbar input{
+  display: none;
+}
+.header i{
+  font-size: 30px;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 10px;
+  z-index: 9999;
+}
+#toggle-menu:checked~.navbar-list{
+  display: block;
+  display: flex;
+  animation: header 1.5s;
+  
+  
+}
+.header :nth-child(2){
+  order: -1;
+}
+@keyframes header{
+  from{
+    left: -500px;
+  }
+  to{
+    left:0px;
+  }
+}
