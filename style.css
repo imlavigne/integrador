@@ -39,7 +39,7 @@ body{
   align-items: center;
   top: 100px;
   right: calc(0vw);
-  /* background-color: aqua; */
+  background-color: white;
   width: 100%;
   gap: 5px;
   
@@ -48,7 +48,9 @@ body{
 .navbar-list a{
 
   color: red;
-  font-size: 50px;
+  font-size: 30px;
+  
+  
 }
 .navbar input{
   display: none;
@@ -141,4 +143,15 @@ body{
   font-size: 1.2rem;
   padding: 0.8rem 4rem;
   border-radius: 2rem;
+}
+.whatsapp{
+  font-size: 3rem;
+  position: fixed;
+  right: 5px;
+  bottom: 10px;
+/* background-color: green; */
+  animation: shakeY; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 10s; 
+  /* color: blue; */
+  animation-iteration-count: infinite;
 }
