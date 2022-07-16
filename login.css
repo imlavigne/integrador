@@ -70,3 +70,14 @@ body{
 .btnsubmit:hover{
     cursor: pointer;
 }
+@media (min-width:1024px) {
+   body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+   }
+   .container-logo img{
+    width: 50%;
+   }
+}

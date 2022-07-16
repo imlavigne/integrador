@@ -46,14 +46,15 @@ body{
   right: calc(0vw);
   background-color: white;
   width: 100%;
-  gap: 5px;
-  
-  display: none;
+  gap: 2 px;
+  font-family: 'Monoton', cursive;
+  /* font-size: 10px; */
+  display: none;  
 }
 .navbar-list a{
 
   color: red;
-  font-size: 30px;
+  font-size: 120%;
   
   
 }
@@ -128,6 +129,9 @@ body{
 .productos img{
   max-width: 250px;
 }
+/* .productos img:hover{
+  transform: scale(2);
+} */
 .productos{
   display: flex;
   flex-direction: column;
@@ -198,15 +202,195 @@ footer{
   width: 100%;
   gap: 1rem;
 }
+.foter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .redes{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   /* background-color: aqua; */
-  width: 20%;
+  /* width: 20%; */
   font-size: 200%;
-
+  color: black;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 footer p{
-  font-size: 10px;
+  font-size: 1rem;
 }
+.redes  a{
+  color: black;
+}
+.map{
+  width: 200px;
+  height: 200px;
+}
+.telefono{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+@media  (min-width:1024px){
+  html {
+    
+    scroll-padding-top: 200px; /*Tamaño del header, para que cuando navego mediante el nav no se superponga header a las secciones*/
+  }
+  /*acomdodamos el navbar para que cuando actuen las medias querry que como querremos. list a la derecha  logo al medio, para ese vamos a tener que poner uns position, y carro a la izquierda*/
+.navbar-list{
+  display: block;
+  display: flex;
+  flex-direction: row;
+  position: static;
+  gap: 1rem;
+
+/* background-color: aqua; */
+  
+}
+.navbar-list a{
+  font-size: 20px;
+  font-family: sans-serif;
+  
+
+}
+.navbar label{
+  display: none;
+}
+
+/* .navbar i{
+  width: 20%;
+  background-color: aqua;
+} */
+.container-logo{
+  position: absolute;
+  /* margin:  auto; */
+  
+  right: 45%; 
+ /* top: px; */
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  /* background-color: aqua; */
+  align-items: center;
+  justify-content: space-between;
+  height: 200px;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+.container-logo img{
+  width: 200px;
+ }
+.navbar-list a {
+  position: relative;
+}
+ 
+.navbar-list a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: red;
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+.navbar-list a:hover::before {
+  transform: scaleX(1);
+}
+.navbar-list a::before {
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
+}
+.navbar-list a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
+}
+/*terminamos el media del navbar*/
+/*productos*/
+.section-productos{
+  margin-top: 0rem;
+}
+.container-productos{
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1800px;
+  margin: 3rem auto 0 auto;
+  gap: 50px;
+  /* background-color: black; */
+  align-items: baseline;
+  
+}
+.productos{
+  height: 500px;
+  width: 300px;
+}
+.productos img{
+  height: 300px;
+  width: 250px;
+}
+.productos img:hover{
+  transform: scale(2);
+}
+.btn-anadir:hover{
+  transform: scale(1.5);
+}
+/*nosotros*/
+.nosotros{
+  max-width: 1000px;
+  text-align: center;
+}
+.nosotros p{
+  font-size: 150%;
+}
+h2{
+  font-size: 150%;
+}
+/* nosotros*/
+/*contactanos*/
+/* .input{
+  flex-direction: row;
+} */
+/* .contactos{
+  align-items: baseline;
+} */
+.foter :first-child{
+  order:1;
+}
+.foter{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:center;
+  gap: 5rem;
+  margin-top: 4rem;
+  position: relative;
+}
+.redes  :nth-child(1){
+  order: 0;
+  
+}
+.redes{
+  gap:3rem;
+  font-size: 3rem;
+}
+.telefono i{
+  position: absolute;
+  margin-bottom: 250px;
+  right: 40%;
+}
+
+
+}
+  
